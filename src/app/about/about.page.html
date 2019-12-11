@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title slot="start">{{ 'about.pageName' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="content" padding>
+  <ion-row align-items-center>
+    <ion-col size="12">
+      <ion-list>
+        <ion-list-header>
+          <ion-label>{{ 'about.contactme' | translate }}</ion-label>
+        </ion-list-header>
+        <ion-item class="contact" (click)="aboutOpen('https://twitter.com/zaekof')" ><ion-icon name="logo-twitter"></ion-icon> <span>@Zaekof</span></ion-item>
+        <ion-item class="contact" (click)="aboutOpen('mailto:pro.nogierloic@gmail.com?subject=MultiTwitch Android')" ><ion-icon name="mail"></ion-icon> <span>pro.nogierloic@gmail.com</span></ion-item>
+        <ion-item>
+          <p>
+            {{ 'about.infoOne' | translate }}
+            <br /><br />
+            {{ 'about.infoTwo' | translate }} <span (click)="aboutOpen('https://twitter.com/zaekof')">@Zaekof</span>.
+            <br /><br />
+            {{ 'about.infoTree' | translate }} <span (click)="aboutOpen('https://trello.com/b/sRuEadpw/multitwitch-android ')">Trello</span>.       
+          </p>
+        </ion-item>
+        <ion-item>
+          <p>
+            {{ 'about.infoFour' | translate }}
+            <br /><br />
+            {{ 'about.infoFive' | translate }}! :D
+            <br />
+            BMC : <a (click)="aboutOpen('https://buymeacoff.ee/zaekof')">buymeacoff.ee/zaekof</a>.
+            <br />
+            PAYPAL : <a (click)="aboutOpen('https://www.paypal.me/zaekof')">paypal.me/zaekof</a>.
+          </p>
+        </ion-item>
+        <ion-item>
+          <p>
+            {{ 'about.infoRate' | translate }} : <span style="color: #4185FF" (click)="aboutOpen('market://details?id=fr.zkf.multi_twitch')">{{ 'about.infoRateBtn' | translate }}</span>.
+          </p>
+        </ion-item>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+</ion-content>

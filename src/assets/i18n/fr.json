@@ -1,0 +1,32 @@
+{
+  "home": {
+    "labelPseudo": "Pseudo Twitch",
+    "streamerAdd": "Ajouter",
+    "shareStreamers": "Partager",
+    "popOverLinkCopyText": "Copiez votre lien",
+    "popOverLinkCopybtn": "Copier",
+    "popOverLinkCancelbtn": "Annuler",
+    "popOverLinkSuccesTxt": "Votre lien a été copié",
+    "popOverMessageOne": "Voici le lien généré avec vos utilisateurs prédéfinis :",
+    "popOverMessageTwo": "Vous pouvez raccourcir le lien ici :"
+  },
+  "presetuser": {
+    "name": "Nom du préréglage",
+    "errorEmptyUser": "Veuillez d'abord ajouter un utilisateur sur la page d'accuei"
+  },
+  "about": {
+    "contactme": "Me Contacter",
+    "pageName": "À propos",
+    "infoOne": "Pour connecter votre compte Twitch ou changer de langue, cliquez sur l'icône (Paramètres) en haut à droite de la page d'accueil.",
+    "infoTwo": "Suivez-moi sur Twitter pour recevoir les dernières mises à jour :",
+    "infoTree": "Vous avez accès au Trello du Multi Twitch pour suivre l'avancement de mon travail :",
+    "infoFour": "Je travaille volontairement sur cette application, je n'en tire aucun bénéfice, sauf mon expérience personnelle.",
+    "infoFive": "Merci de me faire confiance, vous pouvez soutenir mon travail en m'achetant un café ou avec un petit don paypal",
+    "infoRate": "N'hésitez pas à noter mon application sur la boutique android",
+    "infoRateBtn": "Donne ton avis"
+  },
+  "utils": {
+    "wait": "Veuillez patienter.."
+  },
+  "language": "Français"
+}

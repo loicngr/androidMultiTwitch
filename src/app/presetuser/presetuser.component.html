@@ -1,0 +1,19 @@
+<ion-content class="content" padding>
+  <ion-row align-items-center>
+    <ion-col>
+      <ion-item>
+        <ion-label position="floating">{{ 'presetuser.name' | translate }}</ion-label>
+        <ion-input type="text" [(ngModel)]="namePreset"></ion-input>
+      </ion-item>
+      <ion-button color="tertiary" expand="full" (click)="addPreset()" ><ion-icon name="add-circle-outline"></ion-icon></ion-button>
+    </ion-col>
+  </ion-row>  
+  <ion-list *ngFor="let preset of allPresets, let i=index">
+    <ion-item>
+      <ion-label style="font-size: 0.7rem;">{{preset}}</ion-label>
+      <ion-button color="tertiary" (click)="openUrlStreamers(i)"><ion-icon name="link"></ion-icon></ion-button>
+      <ion-button color="tertiary" (click)="setPreset(i)"><ion-icon name="open"></ion-icon></ion-button>
+      <ion-button color="tertiary" (click)="removePreset(i)"><ion-icon name="close"></ion-icon></ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

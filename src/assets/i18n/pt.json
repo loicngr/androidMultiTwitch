@@ -1,0 +1,32 @@
+{
+  "home": {
+    "labelPseudo": "Apelido Twitch",
+    "streamerAdd": "Adicionar à lista",
+    "shareStreamers": "Compartilhar",
+    "popOverLinkCopyText": "Copie o seu link",
+    "popOverLinkCopybtn": "Cópia",
+    "popOverLinkCancelbtn": "Cancelar",
+    "popOverLinkSuccesTxt": "Seu link foi copiado",
+    "popOverMessageOne": "Aqui está o link gerado com seus usuários predefinidos:",
+    "popOverMessageTwo": "Você pode encurtar o link aqui:"
+  },
+  "presetuser": {
+    "errorEmptyUser": "Por favor, primeiro some o usuário em home page",
+    "name": "Prefixe nome"
+  },
+  "about": {
+    "contactme": "Para me contactar",
+    "pageName": "Sobre nós",
+    "infoOne": "Para conectar sua conta Twitch ou alterar o idioma, clique no ícone (configurações) no canto superior direito da página inicial.",
+    "infoTwo": "Por favor, siga-me no Twitter para obter as últimas atualizações :",
+    "infoTree": "Tem acesso à Trello Multi Twitch para acompanhar o progresso do meu trabalho :",
+    "infoFour": "Eu trabalho voluntariamente nesta aplicação, não recebo nenhum benefício da mesma, exceto experiência pessoal.",
+    "infoFive": "Obrigado por confiares em mim, podes apoiar o meu trabalho comprando-me café",
+    "infoRate": "Por favor, sinta-se livre para avaliar a minha aplicação na loja android",
+    "infoRateBtn": "Dê a sua opinião"
+  },
+  "utils": {
+    "wait": "Por favor aguarde.."
+  },
+  "language": "Portuguese"
+}

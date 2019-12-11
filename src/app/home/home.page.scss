@@ -1,0 +1,16 @@
+:root {
+  --primary-color: orange;
+}
+
+.content, ion-content {
+  background: var(--primary-color) !important;
+}
+
+article {
+  background: var(--primary-color);
+}
+
+button {
+  --primary-color: blue;
+  background: var(--primary-color);
+}

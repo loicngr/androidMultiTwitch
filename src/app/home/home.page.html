@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title slot="start">Multi Twitch</ion-title>
+    <ion-buttons slot="primary" class="sc-ion-buttons-md-h sc-ion-buttons-md-s md hydrated">
+      <ion-button (click)="openSettings()">
+        <ion-icon name="settings"></ion-icon>
+      </ion-button>
+      <ion-button routerLink="/about" routerDirection="forward" class="md button button-clear ion-activatable ion-focusable hydrated">
+        <ion-icon slot="icon-only" name="information-circle-outline" role="img" class="md hydrated" aria-label="info"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="content" padding>
+  <ion-row align-items-center>
+    <ion-col>
+      <ion-item>
+        <ion-label position="floating">{{ 'home.labelPseudo' | translate }}</ion-label>
+        <ion-input type="text" minlength="2" [(ngModel)]="inputStreamer"></ion-input>
+      </ion-item>
+      <ion-button expand="full" color="tertiary" id="btnAddStreamer" (click)="addStreamer()">{{ 'home.streamerAdd' | translate }}</ion-button>
+      <ion-button *ngIf="streamers.length !== 0"  expand="full" color="tertiary" (click)="shareStreamers()">{{ 'home.shareStreamers' | translate }}</ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row id="refreshIntentUrl">
+    <ion-col size="12">
+      <ion-list class="md list-md hydrated">
+        <ion-item *ngFor="let entry of streamers" class="item md in-list ion-focusable item-label hydrated">
+          <ion-label>
+            {{entry.pseudo}}
+          </ion-label>
+          <ion-button color="tertiary" (click)="removeStreamer(entry.id)"><ion-icon name="trash"></ion-icon></ion-button>
+        </ion-item>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+  <ion-fab *ngIf="streamers.length !== 0" horizontal="end" vertical="bottom" slot="fixed" class="md fab-horizontal-start fab-vertical-bottom hydrated">
+    <ion-fab-button color="tertiary" (click)="goPageStreams()" class="md ion-activatable ion-focusable hydrated">
+      <ion-icon name="logo-twitch" role="img" class="md hydrated" aria-label="twitch"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="tertiary" (click)="goPresetuser()">
+      <ion-icon name="save"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

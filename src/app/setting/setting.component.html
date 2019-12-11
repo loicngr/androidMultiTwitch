@@ -1,0 +1,66 @@
+<ion-content>
+  <ion-list>
+    <ion-radio-group>
+      <ion-list-header>App theme</ion-list-header>
+      <ion-item>
+        <ion-label>Autumn</ion-label>
+        <ion-radio (click)="changeTheme('autumn')"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Dark</ion-label>
+        <ion-radio (click)="changeTheme('night')"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Neon</ion-label>
+        <ion-radio (click)="changeTheme('neon')"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Light</ion-label>
+        <ion-radio (click)="changeTheme('default')"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+  <ion-list>
+    <ion-radio-group>
+      <ion-list-header>Language</ion-list-header>
+  
+      <ion-item>
+        <ion-label>English</ion-label>
+        <ion-radio value="english" (click)="setLanguage('en')"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>French</ion-label>
+        <ion-radio value="french" (click)="setLanguage('fr')"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Portuguese</ion-label>
+        <ion-radio value="portuguese" (click)="setLanguage('pt')"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Russian</ion-label>
+        <ion-radio value="russian" (click)="setLanguage('ru')"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Chinese</ion-label>
+        <ion-radio value="chinese" (click)="setLanguage('zh')"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Japanese</ion-label>
+        <ion-radio value="japanese" (click)="setLanguage('ja')"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+  <ion-card style="text-align: center;">
+    <ion-card-header>
+      <ion-card-title>Status : {{twStatus}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button (click)="oauthTwitch()">Oauth with Twitch</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,32 @@
+{
+  "home": {
+    "labelPseudo": "号",
+    "streamerAdd": "リストに追加し",
+    "shareStreamers": "シェア",
+    "popOverLinkCopyText": "あなたのリンクをコピーする",
+    "popOverLinkCopybtn": "コピーする",
+    "popOverLinkCancelbtn": "キャンセル",
+    "popOverLinkSuccesTxt": "あなたのリンクはコピーされました",
+    "popOverMessageOne": "定義済みのユーザーで生成されたリンクは次のとおりです。",
+    "popOverMessageTwo": "ここでリンクを短縮できます："
+  },
+  "presetuser": {
+    "errorEmptyUser": "どうか、ホームページで最初にユーザーを加えてください",
+    "name": "プリセット名"
+  },
+  "about": {
+    "contactme": "私と連絡を取ってください",
+    "pageName": "について",
+    "infoOne": "あなたのTwitchアカウントを接続したり、言語を変更したりするには、ホームページの右上にある「設定」アイコンをクリックしてください。",
+    "infoTwo": "最後の更新を得るためにTwitterで私に従ってください :",
+    "infoTree": "あなたは私の仕事の進行状況を追跡するためにMulti Twitch Trelloにアクセスすることができます。",
+    "infoFour": "私はこのアプリケーションに自発的に取り組みます、私は個人的な経験を除いて、私はそれから利益を得ません。",
+    "infoFive": "私を信頼してくれてありがとう、あなたは私にコーヒーを買うことによって私の仕事を支えることができます",
+    "infoRate": "私のアプリケーションをアンドロイドショップで評価してください。",
+    "infoRateBtn": "あなたの意見を与えます"
+  },
+  "utils": {
+    "wait": "お待ちください.."
+  },
+  "language": "Japanese"
+}

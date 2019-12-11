@@ -1,0 +1,7 @@
+{
+  "name": "multitwitch",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

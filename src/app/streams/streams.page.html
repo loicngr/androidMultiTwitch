@@ -1,0 +1,185 @@
+<ion-header *ngIf="orientation === 'portrait-primary'">
+  <ion-toolbar *ngIf="!fullscreen">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title slot="start">Streams</ion-title>
+    <ion-buttons slot="primary" class="sc-ion-buttons-md-h sc-ion-buttons-md-s md hydrated">
+      <ion-button (click)="goFullScreen()">
+        <ion-icon name="qr-scanner"></ion-icon>
+      </ion-button>
+      <!-- <ion-button (click)="goCast()">
+        <ion-icon name="tv"></ion-icon>
+      </ion-button> -->
+      <ion-button (click)="refreshStatus = !refreshStatus">
+        <ion-icon name="refresh"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content">
+  <ion-grid class="chat" no-padding fixed="true">
+    <ion-buttons class="btn_chat">
+      <ion-button color="tertiary" *ngIf="!hud" fill="solid" (click)="toggleChat()" ><ion-icon name="chatboxes"></ion-icon></ion-button>
+      <ion-button color="tertiary" *ngIf="chatView" fill="solid" (click)="hideHUD()" ><ion-icon name="eye"></ion-icon></ion-button>
+      <ion-button color="tertiary" *ngIf="chatView && !hud" fill="solid" (click)="switchChat()" >{{data[chatViewCurrentId]}}</ion-button>
+      <ion-button color="tertiary" *ngIf="fullscreen && !hud" fill="solid" (click)="goFullScreen()"><ion-icon name="qr-scanner"></ion-icon></ion-button>
+    </ion-buttons>
+    <!-- CHAT IFRAME -->
+    <ion-row>
+      <ion-col size="6" class="landscape" *ngIf="orientation !== 'portrait-primary' && chatView && data.length !== 1">
+          <iframe
+          [src]="getChat(chatViewCurrentId)"
+          frameborder="0"
+          class="iframe_chat"
+          scrolling="yes"
+          height="100%"
+          width="100%"
+        >
+        </iframe>
+      </ion-col>
+      <ion-col size="12" class="portrait" *ngIf="orientation === 'portrait-primary' && chatView && data.length !== 1">
+          <iframe
+          [src]="getChat(chatViewCurrentId)"
+          frameborder="0"
+          class="iframe_chat"
+          scrolling="yes"
+          height="100%"
+          width="100%"
+        >
+        </iframe>
+      </ion-col>      
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="grid" no-padding fixed>
+    <ion-row class="grid" *ngIf="data.length === 1">
+      <ion-col size="12" size-sm="6" *ngIf="chatView" style="left: 0 !important; padding: 0 !important; margin: 0 !important;">
+        <ion-button (click)="refreshIframe(i)" style="position: absolute; z-index: 999;" *ngIf="refreshStatus" color="tertiary" fill="solid">
+          <ion-icon name="refresh"></ion-icon>
+        </ion-button>
+        <iframe
+          [src]="urls[0]"
+          frameborder="0"
+          allowfullscreen="true"
+          scrolling="no"
+          height="100%"
+          width="100%"
+        >
+        </iframe>
+      </ion-col>
+      <ion-col size="12" size-sm="12" *ngIf="!chatView" style="left: 0 !important; padding: 0 !important; margin: 0 !important;">
+        <ion-button (click)="refreshIframe(i)" style="position: absolute; z-index: 999;" *ngIf="refreshStatus" color="tertiary" fill="solid">
+          <ion-icon name="refresh"></ion-icon>
+        </ion-button>
+        <iframe
+          [src]="urls[0]"
+          frameborder="0"
+          allowfullscreen="true"
+          scrolling="no"
+          height="100%"
+          width="100%"
+        >
+        </iframe>
+      </ion-col>
+      <ion-col size="12" size-sm="6" *ngIf="chatView" style="left: 0 !important; padding: 0 !important; margin: 0 !important;">
+        <iframe
+          [src]="getChat(chatViewCurrentId)"
+          frameborder="0"
+          scrolling="yes"
+          height="100%"
+          width="100%"
+        >
+        </iframe>
+      </ion-col>
+    </ion-row>
+    <ion-row class="grid fullwidth" *ngIf="data.length === 2">
+      <ng-container *ngFor="let streamer of data; let i=index">
+        <ion-col size="12" size-sm="6" style="left: 0 !important; padding: 0 !important; margin: 0 !important;">
+          <ion-button (click)="refreshIframe(i)"  style="position: absolute; z-index: 999;" *ngIf="refreshStatus" color="tertiary" fill="solid">
+            <ion-icon name="refresh"></ion-icon>
+          </ion-button>
+          <iframe
+            [src]="urls[i]"
+            frameborder="0"
+            allowfullscreen="true"
+            scrolling="no"
+            height="100%"
+            width="100%"
+          >
+          </iframe>
+        </ion-col>
+      </ng-container>
+    </ion-row>
+    <ion-row class="grid" *ngIf="data.length === 3">
+      <ng-container *ngFor="let streamer of data; let i=index">
+        <ng-container *ngIf="i === 2">
+          <ion-col size="12" size-sm="12" style="left: 0 !important; padding: 0 !important; margin: 0 !important;">
+            <ion-button (click)="refreshIframe(i)"  style="position: absolute; z-index: 999;" *ngIf="refreshStatus" color="tertiary" fill="solid">
+              <ion-icon name="refresh"></ion-icon>
+            </ion-button>
+            <iframe
+              [src]="urls[i]"
+              frameborder="0"
+              allowfullscreen="true"
+              scrolling="no"
+              height="100%"
+              width="100%"
+            >
+            </iframe>
+          </ion-col>
+        </ng-container>
+        <ng-container *ngIf="i < 2">
+          <ion-col size="12" else size-sm="6" style="left: 0 !important; padding: 0 !important; margin: 0 !important;">
+              <ion-button (click)="refreshIframe(i)"  style="position: absolute; z-index: 999;" *ngIf="refreshStatus" color="tertiary" fill="solid">
+                <ion-icon name="refresh"></ion-icon>
+              </ion-button>
+              <iframe
+                [src]="urls[i]"
+                frameborder="0"
+                allowfullscreen="true"
+                scrolling="no"
+                height="100%"
+                width="100%"
+              >
+              </iframe> 
+          </ion-col>  
+        </ng-container>
+      </ng-container>
+    </ion-row>
+    <ion-row class="grid" *ngIf="data.length === 4">
+      <ng-container *ngFor="let streamer of data; let i=index">
+        <ion-col size="6" size-sm="6" style="left: 0 !important; padding: 0 !important; margin: 0 !important;">
+          <ion-button (click)="refreshIframe(i)"  style="position: absolute; z-index: 999;" *ngIf="refreshStatus" color="tertiary" fill="solid">
+            <ion-icon name="refresh"></ion-icon>
+          </ion-button>
+          <iframe
+            [src]="urls[i]"
+            frameborder="0"
+            allowfullscreen="true"
+            scrolling="no"
+            height="100%"
+            width="100%"
+          >
+          </iframe>
+        </ion-col>
+      </ng-container>
+    </ion-row>
+    <ion-row class="grid" *ngIf="data.length > 4">
+      <ion-col size="12" size-sm="6" *ngFor="let streamer of data; let i=index" style="left: 0 !important; padding: 0 !important; margin: 0 !important;">
+        <ion-button (click)="refreshIframe(i)"  style="position: absolute; z-index: 999;" *ngIf="refreshStatus" color="tertiary" fill="solid">
+          <ion-icon name="refresh"></ion-icon>
+        </ion-button>
+        <iframe
+          [src]="urls[i]"
+          frameborder="0"
+          allowfullscreen="true"
+          scrolling="no"
+          height="100%"
+          width="100%"
+        >
+        </iframe>
+      </ion-col>    
+    </ion-row>
+  </ion-grid>
+</ion-content>

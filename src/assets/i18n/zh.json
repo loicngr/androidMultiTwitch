@@ -1,0 +1,32 @@
+{
+  "home": {
+    "labelPseudo": "化名",
+    "streamerAdd": "添加到列表中",
+    "shareStreamers": "分享",
+    "popOverLinkCopyText": "复制您的链接",
+    "popOverLinkCopybtn": "复制",
+    "popOverLinkCancelbtn": "取消",
+    "popOverLinkSuccesTxt": "您的链接已被复制",
+    "popOverMessageOne": "这是与您的预定义用户生成的链接：",
+    "popOverMessageTwo": "您可以在此处缩短链接："
+  },
+  "presetuser": {
+    "errorEmptyUser": "请先在主页上添加用户",
+    "name": "预设名称"
+  },
+  "about": {
+    "contactme": "请与我联系",
+    "pageName": "关于",
+    "infoOne": "要连接Twitch帐户或更改语言，请单击主页右上角的“设置”图标。",
+    "infoTwo": "请在Twitter上关注我以获取最新更新 :",
+    "infoTree": "您可以访问Multi Twitch Trello来跟踪我的工作进度 ：",
+    "infoFour": "我自愿在这个应用程序上工作，除了个人经验，我没有从中获益。",
+    "infoFive": "谢谢你相信我，你可以给我买咖啡来支持我的工作",
+    "infoRate": "请随时在Android商店评价我的应用程序",
+    "infoRateBtn": "发表您的意见"
+  },
+  "utils": {
+    "wait": "请耐心等待.."
+  },
+  "language": "Chinese"
+}

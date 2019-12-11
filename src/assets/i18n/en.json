@@ -1,0 +1,32 @@
+{
+  "home": {
+    "labelPseudo": "Twitch Pseudo",
+    "streamerAdd": "Add",
+    "shareStreamers": "Share",
+    "popOverLinkCopyText": "Copy your link",
+    "popOverLinkCopybtn": "Copy",
+    "popOverLinkCancelbtn": "Cancel",
+    "popOverLinkSuccesTxt": "Your link has been copied",
+    "popOverMessageOne": "Here is the link generated with your predefined users:",
+    "popOverMessageTwo": "You can shorten the link here:"
+  },
+  "presetuser": {
+    "name": "Preset Name",
+    "errorEmptyUser": "Please, first add user on home page"
+  },
+  "about": {
+    "contactme": "Contact Me",
+    "pageName": "About",
+    "infoOne": "To connect your Twitch account or change language, click on the (settings) icon at the top right on the Home Page.",
+    "infoTwo": "Please, follow me on Twitter for get the last updates :",
+    "infoTree": "You have access to the Multi Twitch Trello to follow the progress of my work :",
+    "infoFour": "I work voluntarily on this application, I get no benefit from it, except personal experience.",
+    "infoFive": "Thank you for trusting me, you can support my work by buying me coffee",
+    "infoRate": "Please feel free to rate my application on the android shop",
+    "infoRateBtn": "Give your feedback"
+  },
+  "utils": {
+    "wait": "Please wait..."
+  },
+  "language": "English"
+}
